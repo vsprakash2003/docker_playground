@@ -1,0 +1,15 @@
+FROM node:alpine
+
+RUN apk add --no-cache tini
+
+WORKDIR "/app"
+
+COPY ./package.json ./
+
+RUN yarn install
+
+COPY . .
+
+ENTRYPOINT [ "tini", "--"  ]
+
+CMD ["yarn", "start"]
