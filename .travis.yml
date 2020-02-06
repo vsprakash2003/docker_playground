@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install: 
-    - docker build -t vsprakash2003/react-docker-test -f ./client/Dockerfile
+    - docker build -f ./client/Dockerfile -t vsprakash2003/react-docker-test
 
 script:
     - docker run -e CI=true vsprakash2003/react-docker-test yarn test
@@ -20,4 +20,4 @@ after_success:
     - docker push vsprakash2003/docker-multi-container-nginx-test
     - docker push vsprakash2003/docker-multi-container-server-test
     - docker push vsprakash2003/docker-multi-container-worker-test
-    
+
