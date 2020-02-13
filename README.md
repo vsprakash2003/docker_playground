@@ -167,3 +167,11 @@ git push -u origin master
 3. bucket name is the name of the bucket created
 4. bucket path is any name that can be given ex: docker_multi
 ```
+
+## to view the logs in EBS
+```
+1. click on the EBS instance
+2. click on logs from the left menu
+3. click on request logs drop down button
+4. click on download and download the log file
+```
