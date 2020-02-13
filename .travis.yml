@@ -24,7 +24,7 @@ after_success:
 deploy:
     provider: elasticbeanstalk
     region: us-east-2
-    app: multi-container_test
+    app: multi-container-test
     env: MultiContainerTest-env
     bucket_name: elasticbeanstalk-us-east-2-878765816605
     bucket_path: docker_multi
