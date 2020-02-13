@@ -165,5 +165,5 @@ git push -u origin master
 1. to get the bucket name, search for S3 in the AWS services search
 2. click the bucket that has been created
 3. bucket name is the name of the bucket created
-4. bucket path is any name that can be given
+4. bucket path is any name that can be given ex: docker_multi
 ```
