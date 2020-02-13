@@ -1,0 +1,36 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "client",
+            "image": "vsprakash2003/docker-multi-container-client-test",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "vsprakash2003/docker-multi-container-server-test",
+            "hostname": "api",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "vsprakash2003/docker-multi-container-worker-test",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "vsprakash2003/docker-multi-container-nginx-test",
+            "hostname": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["client", "server"]
+        }
+    ]
+}
