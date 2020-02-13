@@ -160,7 +160,7 @@ git push -u origin master
 3. the value for these keys will be the AWS access key and secret key generated in the previous setp
 ```
 
-## bucket name and bucket path in the deploy services of travis.yml
+## specify bucket name and bucket path in the deploy services of travis.yml
 ```
 1. to get the bucket name, search for S3 in the AWS services search
 2. click the bucket that has been created
