@@ -21,15 +21,15 @@ after_success:
     - docker push vsprakash2003/docker-multi-container-server-test
     - docker push vsprakash2003/docker-multi-container-worker-test
 
-    deploy:
-        provider: elasticbeanstalk
-        region: us-east-2
-        app: multi-container_test
-        env: MultiContainerTest-env
-        bucket_name: elasticbeanstalk-us-east-2-878765816605
-        bucket_path: docker_multi
-        on: 
-            branch: master
-        access_key_id: $AWS_ACCESS_KEY
-        secret_access_key: 
-            secure: $AWS_SECRET_KEY
+deploy:
+    provider: elasticbeanstalk
+    region: us-east-2
+    app: multi-container_test
+    env: MultiContainerTest-env
+    bucket_name: elasticbeanstalk-us-east-2-878765816605
+    bucket_path: docker_multi
+    on: 
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: 
+        secure: $AWS_SECRET_KEY
