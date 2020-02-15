@@ -9,17 +9,17 @@ script:
     - docker run -e CI=true vsprakash2003/react-docker-test yarn test
 
 after_success:
-    - docker build -t vsprakash2003/docker-multi-container-client-test ./client
-    - docker build -t vsprakash2003/docker-multi-container-nginx-test ./nginx
-    - docker build -t vsprakash2003/docker-multi-container-server-test ./server
-    - docker build -t vsprakash2003/docker-multi-container-worker-test ./worker
+    - docker build -t vsprakash2003/docker-multi-container-client-test:latest ./client
+    - docker build -t vsprakash2003/docker-multi-container-nginx-test:latest ./nginx
+    - docker build -t vsprakash2003/docker-multi-container-server-test:latest ./server
+    - docker build -t vsprakash2003/docker-multi-container-worker-test:latest ./worker
 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    - docker push vsprakash2003/docker-multi-container-client-test
-    - docker push vsprakash2003/docker-multi-container-nginx-test
-    - docker push vsprakash2003/docker-multi-container-server-test
-    - docker push vsprakash2003/docker-multi-container-worker-test
+    - docker push vsprakash2003/docker-multi-container-client-test:latest
+    - docker push vsprakash2003/docker-multi-container-nginx-test:latest
+    - docker push vsprakash2003/docker-multi-container-server-test:latest
+    - docker push vsprakash2003/docker-multi-container-worker-test:latest
 
 deploy:
     provider: elasticbeanstalk
