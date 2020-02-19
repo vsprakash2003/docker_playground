@@ -175,3 +175,21 @@ git push -u origin master
 3. click on request logs drop down button
 4. click on download and download the log file
 ```
+
+## Kubernetes setup
+### install minikube
+`brew install minikube`
+
+### check minikube installation
+`minikube status`
+
+### install virtualbox
+```
+1. download virtualbox from virtualbox.org
+```
+
+### install kubectl
+`brew install kubectl`
+
+### check kubectl installation
+`kubectl cluster-info`
