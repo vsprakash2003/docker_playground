@@ -43,8 +43,8 @@ git push -u origin master
 4. specify application name ex: multi-docker
 5. the page is now displayed with message "No environments currently exist for this application. Create one now"
 6. click on create one now link
-7. select the web environment box
-8. select Multi-Docker conatiner from the pre-configured platform drop down
+7. select the web server environment box
+8. select Multi-container Docker from the pre-configured platform drop down
 9. click create new environment
 ```
 
@@ -131,7 +131,7 @@ git push -u origin master
 12. Here are the other environment variables that need to be entered
     PGUSER - postgres
     PGPASSWORD - the password you entered while creating the RDS instance
-    PGSUER - click services, select RDS, click on databases, select the postgres instance, copy the end point
+    PGHOST - click services, select RDS, click on databases, select the postgres instance, copy the end point
     PGDATABASE - fibvalues
     PGPORT - 5432
 13. click apply
