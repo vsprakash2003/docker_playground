@@ -22,7 +22,7 @@ after_success:
     - docker push vsprakash2003/docker-multi-container-worker-test:v1
 
 deploy:
-    provider: s3
+    provider: elasticbeanstalk
     region: us-east-2
     app: multi-docker-test
     env: MultiDockerTest-env
