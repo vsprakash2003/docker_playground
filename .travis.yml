@@ -22,14 +22,14 @@ after_success:
     - docker push vsprakash2003/docker-multi-container-worker-test:v1
 
 deploy:
+    edge: true
     provider: elasticbeanstalk
     region: us-east-2
     app: multi-docker-test
     env: MultiDockerTest-env
-    bucket_name: elasticbeanstalk-us-east-2-412403648500
-    bucket_path: docker-multi
+    bucket_name: elasticbeanstalk-us-east-2-878765816605
+    bucket_path: docker_multi
     on: 
         branch: master
     access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: 
-        secure: $AWS_SECRET_KEY
+    secret_access_key: $AWS_SECRET_KEY
